@@ -11,8 +11,8 @@ function fetchDog() {
 
             const dogData = data[0];
             const imageUrl= dogData.url;
-            const breedName = dogData.breeds?.[0]?.name;
-            const breedWeight = dogData.breeds?.[0]?.weight.imperial;
+            const breedName = dogData.breeds?.[0]?.name; "Unknown Breed";
+            const breedWeight = dogData.breeds?.[0]?.weight?.imperial; "N/A";
 
 
             dogImage.src = imageUrl;
