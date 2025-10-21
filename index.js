@@ -21,7 +21,7 @@ async function fetchDog() {
         const breedName = dogData.name || "Unknown Breed";
         const breedWeight = dogData.weight?.imperial || "N/A";
 
-        // 🐶 If breed has an image, use it — otherwise fetch a random one
+        
         let imageUrl = dogData.image?.url;
 
         if (!imageUrl) {
@@ -35,7 +35,7 @@ async function fetchDog() {
             imageUrl = imageData[0].url;
         }
 
-        // ✅ Update the DOM
+        
         dogImage.src = imageUrl;
         dogBreed.textContent = `Breed: ${breedName}`;
         dogWeight.textContent = `Weight: ${breedWeight} lbs`;
